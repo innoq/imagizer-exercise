@@ -1,1 +1,0 @@
-CREATE TABLE Image (Id varchar(40), Origin varchar(500), Filter varchar(30));

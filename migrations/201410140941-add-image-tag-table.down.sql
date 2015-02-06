@@ -1,1 +1,0 @@
-DROP TABLE Image_Tag;
