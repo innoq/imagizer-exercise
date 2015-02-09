@@ -1,19 +1,8 @@
 (ns imagizer.images.retrieval
-  (:require [clj-http.client :as http]
-            [hickory.core :as hickory]))
-
-(defn write-file [byte-array filename]
-   (with-open [stream (java.io.BufferedOutputStream. (java.io.FileOutputStream. filename))]
-     (.write stream byte-array)))
-
-(defn download-to-file [url filename]
-  (-> url
-      (http/get {:as :byte-array})
-      :body
-      (write-file filename)))
+  (:require [hickory.core :as hickory]))
 
 (defn load-html [url]
-  (-> url http/get :body))
+  "")
 
 (defn parse-to-hiccup [str]
   (-> str hickory/parse hickory/as-hiccup))

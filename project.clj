@@ -4,7 +4,6 @@
                  [ring "1.3.1"]
                  [compojure "1.1.9"]
                  [hiccup "1.0.5"]
-                 [clj-http "1.0.0"]
                  [hickory "0.5.4"]
                  [org.im4java/im4java "1.4.0"]
                  [org.clojure/clojurescript "0.0-2356"]
