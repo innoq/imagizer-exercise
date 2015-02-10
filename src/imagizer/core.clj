@@ -29,9 +29,7 @@
     ((-> op ip/conversion ip/converter) from to-file)
     to-id))
 
-(defn store-image-info [uuid src op]
-  (ip/add-image! db-spec uuid src op)
-  (t/add-tag! db-spec uuid op))
+(defn store-image-info [uuid src op])
 
 (defn convert-and-store-image [src op]
   (let [uuid (convert-image src op)]

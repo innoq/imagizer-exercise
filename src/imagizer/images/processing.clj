@@ -5,8 +5,6 @@
 (defquery get-image "db/get_image.sql")
 (defquery get-images-by-tag "db/get_images_by_tag.sql")
 
-(defqueries "db/add_image.sql")
-
 (def conversions (sorted-map
                   :paint #(.paint % 2.0)
                   :blur #(.blur % 10.0)
