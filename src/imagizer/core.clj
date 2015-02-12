@@ -26,7 +26,7 @@
         to-file (str to-path filtered-file-type)
         to-id (last (.split to-path "/"))]
     (ir/download-to-file src from)
-    ((-> op ip/conversion ip/converter) from to-file)
+    (ip/convert op from to-file)
     to-id))
 
 (defn store-image-info [uuid src op])
