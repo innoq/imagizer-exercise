@@ -9,12 +9,6 @@ This is a simple demo project built with Clojure for a talk about Clojure in pra
 
 For this project you need [Leiningen](http://leiningen.org/) and of course a current JDK.
 
-### ImageMagick
-
-Furthermore, you should install [ImageMagick](http://www.imagemagick.org/), e.g., if you're on Mac OS and using homebrew:
-
-    brew install imagemagick
-
 ### Start
 
     lein cljsbuild once
@@ -43,7 +37,6 @@ Here is a list of the dependencies and their documentation:
 * [Ragtime](https://github.com/weavejester/ragtime)
 * [java.jdbc](https://github.com/clojure/java.jdbc/)
 * [h2](http://www.h2database.com/html/main.html)
-* [im4java](http://im4java.sourceforge.net/)
 * [ClojureScript](https://github.com/clojure/clojurescript)
 * [dommy](https://github.com/Prismatic/dommy)
 * [cljs-http](https://github.com/r0man/cljs-http)
