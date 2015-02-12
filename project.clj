@@ -5,7 +5,6 @@
                  [compojure "1.1.9"]
                  [hiccup "1.0.5"]
                  [hickory "0.5.4"]
-                 [org.im4java/im4java "1.4.0"]
                  [org.clojure/clojurescript "0.0-2356"]
                  [prismatic/dommy "0.1.3"]
                  [cljs-http "0.1.16"]
