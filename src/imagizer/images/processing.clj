@@ -55,7 +55,7 @@
   (let [filter ((keyword op) conversions)]
     (println "*** Apply filter *** " (java.util.Arrays/toString filter))
     (let [src (ImageIO/read (File. from))
-          conv (ConvolveOp. (Kernel. 3, 3, filter))
+          conv (ConvolveOp. (Kernel. 3 3 filter))
           dest (File. to)
           converted (.filter conv src nil)]
       (ImageIO/write converted "jpg" dest))))
