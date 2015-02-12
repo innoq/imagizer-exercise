@@ -53,16 +53,13 @@
                   :other2 other2-filter
                   :other3 other3-filter))
 
-(defn converter [filter]
-  (fn [from to]
+(defn convert [op from to]
+  (let [filter ((keyword op) conversions)]
     (println "*** Apply filter *** " (java.util.Arrays/toString filter))
     (let [src (ImageIO/read (File. from))
-          op (ConvolveOp. (Kernel. 3, 3, filter))
+          conv (ConvolveOp. (Kernel. 3 3 filter))
           dest (File. to)
-          img (.filter op src nil)]
-      (ImageIO/write img "jpg" dest))))
-
-(defn conversion [op]
-  ((keyword op) conversions))
+          converted (.filter conv src nil)]
+      (ImageIO/write converted "jpg" dest))))
 
 
