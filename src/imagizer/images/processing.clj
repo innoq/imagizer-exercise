@@ -1,8 +1,5 @@
 (ns imagizer.images.processing
-  (:require [yesql.core :refer [defquery defqueries]])
-  (:import [javax.imageio ImageIO]
-           [java.awt.image ConvolveOp BufferedImage Kernel]
-           [java.io File]))
+  (:require [yesql.core :refer [defquery defqueries]]))
 
 (defquery get-image "db/get_image.sql")
 (defquery get-images-by-tag "db/get_images_by_tag.sql")
@@ -53,16 +50,6 @@
                   :other2 other2-filter
                   :other3 other3-filter))
 
-(defn converter [filter]
-  (fn [from to]
-    (println "*** Apply filter *** " (java.util.Arrays/toString filter))
-    (let [src (ImageIO/read (File. from))
-          op (ConvolveOp. (Kernel. 3, 3, filter))
-          dest (File. to)
-          img (.filter op src nil)]
-      (ImageIO/write img "jpg" dest))))
-
-(defn conversion [op]
-  ((keyword op) conversions))
+(defn convert [op from to])
 
 
