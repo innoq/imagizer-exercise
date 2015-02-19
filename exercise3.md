@@ -20,4 +20,4 @@ Define the function `add-image!` using the `defqueries` macro of Yesql in `imagi
 
 ## Step 3
 
-Call the function `add-tag!` in `imagizer.core` in the prepared function `store-image-info`. The `add-tag!` function expects the db information as first parameter.
+Call the function `add-image!` in `imagizer.core` in the prepared function `store-image-info`. The `add-image!` function expects the database configuration as first parameter. You can find the database configuration in the `imagizer.core` namespace.
