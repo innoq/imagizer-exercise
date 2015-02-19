@@ -16,7 +16,7 @@ For the database access we are using [Yesql](https://github.com/krisajenkins/yes
 
 Now we want to store an image when we converted it. We already prepared the SQL statement in `src/db/add_image.sql`.
 
-Define the method `add-image!` using the `defqueries` macro of Yesql in `imagizer.images.processing`.
+Define the function `add-image!` using the `defqueries` macro of Yesql in `imagizer.images.processing`.
 
 ## Step 3
 
