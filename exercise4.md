@@ -26,3 +26,5 @@ float array containing the filter.
 
 You can use the import section in the namespace definition to avoid 
 using fully qualified class names.
+
+[Here](http://clojure.org/java_interop) you can find more information about using Java classes in Clojure.
